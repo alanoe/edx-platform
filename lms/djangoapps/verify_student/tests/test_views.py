@@ -1656,6 +1656,7 @@ class TestSubmitPhotosForVerification(TestCase):
     def _get_post_data(self):
         """Retrieve POST data from the last request. """
         last_request = httpretty.last_request()
+        print("httpretty last request body: %s" % last_request.body)
         return json.loads(last_request.body)
 
 
